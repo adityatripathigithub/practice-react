@@ -79,39 +79,24 @@
 
 // ********************************************************👇Props driling 👇********************************************************
 
-// import React, { useState } from 'react'
-// import Child1 from './components/Child1'
-
-// const App = () => {
-
-//   const [data, setdata] = useState("Task1")
-//   console.log(data)
-
-//   return (
-//     <div className=''>
-//       <h1 className='p-[5%] text-4xl text-red-400'>Parent</h1>
-
-//       <Child1 data={data} />
-//     </div>
-//   )
-// }
-
-// export default App
-
-// ********************************************************👇TODO LIST 👇********************************************************
-import React from "react";
+import React, { useState } from 'react'
+import Child1 from './components/Child1'
 
 const App = () => {
-    return (
-        <>
-            <div className="w-[30%] h-[25vh] border-2 border-orange-500 rounded-full flex justify-center font-bold text-4xl text-orange-500 mt-5 pt-5">
-                <div>
-                    <h1>Todo List</h1>
-                </div>
-            </div>
-        </>
-    );
-    
-};
 
-export default App;
+  const [data, setdata] = useState({Name: "Aditya", Age: "22"})
+  console.log(data)
+
+  return (
+    <div className=''>
+      <h1 className='p-[5%] text-4xl text-red-400'>Parent</h1>
+
+      <Child1 data={data} />
+    </div>
+  )
+}
+
+export default App
+
+
+// ********************************************************👇Set Data In LocalStorage👇********************************************************

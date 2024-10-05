@@ -1,24 +1,19 @@
-// import React, { useState } from "react";
+import React, { useState } from 'react'
+import Child2 from './Child2'
 
-// const Child1 = ({ data }) => {
-//     const [data1, setData1] = useState(data);
+const Child1 = ({data}) => {
 
-//     const handleChange = () => {
-//         // Only update if the data is different
-//         if (data1.name !== "Rishi" || data1.age !== 25) {
-//             setData1({ name: "Rishi", age: 25 });
-//         }
-//     };
+const [data1, setdata1] = useState(data)
+console.log(data1)
 
-//     return (
-//         <div>
-//             <h1>Child1</h1>
-//             <button className="bg-white text-black px-5 m-5" onClick={handleChange}>
-//                 Click
-//             </button>
-//             <h1 className="bg-red-400 p-5 w-[50%]">{data1.name}</h1>
-//         </div>
-//     );
-// };
+localStorage.setItem("data",JSON.stringify(data))
 
-// export default Child1;
+
+  return (
+    <div>Child1
+        <Child2 data1={data1} />
+    </div>
+  )
+}
+
+export default Child1
