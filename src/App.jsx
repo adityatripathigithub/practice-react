@@ -79,20 +79,45 @@
 
 // ********************************************************👇Props driling 👇********************************************************
 
-import React, { useState } from "react";
-import Child1 from "./components/Child1";
+// import React, { useState } from "react";
+// import Child1 from "./components/Child1";
 
-const App = () => {
-    const [data, setdata] = useState({ Name: "Aditya", Age: "22" });
-    // console.log(data)
+// const App = () => {
+//     const [data, setdata] = useState({ Name: "Aditya", Age: "22" });
+//     // console.log(data)
 
-    return (
-        <div className=" pt-48">
-            <Child1 data={data} />
-        </div>
-    );
-};
+//     return (
+//         <div className=" pt-48">
+//             <Child1 data={data} />
+//         </div>
+//     );
+// };
 
-export default App;
+// export default App;
 
 // ********************************************************👇Set Data In LocalStorage👇********************************************************
+
+import React, { useState } from 'react'
+
+const App = () => {
+
+const [data, setdata] = useState(0);
+
+console.log(data)
+
+const handelchange = ()=>{
+    setdata(data +1)
+}
+
+  return (
+
+    <>
+    <div className='p-10' onClick={handelchange}>Coount
+
+    </div>
+    <h1 className='text-[500px] '>{data}</h1>
+    </>
+  )
+}
+
+export default App
